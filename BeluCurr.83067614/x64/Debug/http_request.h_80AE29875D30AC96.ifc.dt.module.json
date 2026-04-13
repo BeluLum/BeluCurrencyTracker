@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "BeluCurr.83067614\\x64\\Debug\\http_request.obj",
+            "outputs": [
+                "BeluCurr.83067614\\x64\\Debug\\http_request.h_80AE29875D30AC96.ifc.dt.module.json",
+                "BeluCurr.83067614\\x64\\Debug\\http_request.h_80AE29875D30AC96.ifc.dt.d.json",
+                "BeluCurr.83067614\\x64\\Debug\\http_request.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "D:\\COLLIAJNIE SHTUCHKI\\BeluCurrensyTraker\\http_request.h",
+                    "source-path": "d:\\colliajnie shtuchki\\belucurrensytraker\\http_request.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
