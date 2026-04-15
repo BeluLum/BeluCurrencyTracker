@@ -6,4 +6,4 @@
 
 std::string transverator(std::vector<Currency> info);
 
-int menu(std::string buffer, int index);
+int menu(std::string buffer, int& history_index, std::string history[]);

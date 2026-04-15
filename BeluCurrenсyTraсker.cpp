@@ -13,7 +13,7 @@ int main()
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
     
-    int history_index = -1;
+   
     CURL* curl;
     CURLcode res;
     std::string readBuffer;
@@ -29,7 +29,10 @@ int main()
 
     }
     std::cout << "Greetings my goat!";
-    menu(readBuffer, history_index);
+
+    std::string history[10];
+    int history_index = -1;
+    menu(readBuffer, history_index, history);
 
 
 }

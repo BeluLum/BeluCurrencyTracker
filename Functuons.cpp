@@ -42,10 +42,9 @@ std::string transferator(std::vector<Currency> info)
 }
 
 
-int menu(std::string buffer, int index)
+int menu(std::string buffer, int& history_index, std::string history[])
 {
-    std::string history[10];
-    int history_index = -1;
+   
     int selector;
     std::cout << "Please select option from the list below: " << std::endl;
     std::cout << "[1] - Currenсy transfer" << std::endl;
@@ -59,18 +58,19 @@ int menu(std::string buffer, int index)
     switch (selector)
     {
     case 1:
-        index++;
-        history[index] = transferator(currency_maker(buffer));
-        menu(buffer, index);
-
+        history_index++;
+        history[history_index] = transferator(currency_maker(buffer));
+        menu(buffer, history_index, history);
+        break;
     case 2:
         for (int i = 0; i <= history_index; i++)
         {
             std::cout << history[i] << std::endl;
+            std::cout << std::endl;
 
         }
-        menu(buffer, index);
-
+        menu(buffer, history_index, history);
+        break;
     case 3:
         std::cout << std::endl;
         for (int i = 0; i < currency_maker(buffer).size(); i++)
@@ -78,12 +78,12 @@ int menu(std::string buffer, int index)
             std::cout << currency_maker(buffer)[i].name << " - " << currency_maker(buffer)[i].xchange_rate << std::endl;
 
         }
-        menu(buffer, index);
-
+        menu(buffer, history_index, history);
+        break;
     case 4:
         return 0;
 
     }
 
-    return index;
+    return 0;
 }
