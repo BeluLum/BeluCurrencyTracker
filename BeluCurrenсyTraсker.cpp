@@ -4,11 +4,13 @@
 #include <iostream>
 #include <windows.h>
 #include <curl/curl.h>
-
+#include <nlohmann/json.hpp>
 
 
 
 int main()
+
+
 {
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
@@ -28,11 +30,17 @@ int main()
         curl_easy_cleanup(curl);
 
     }
+
+    std::vector<Currency> currency_info = currency_maker(readBuffer);
+    history_auto_saver(currency_info);
+
+    
+
     std::cout << "Greetings my goat!";
 
     std::string history[10];
     int history_index = -1;
-    menu(readBuffer, history_index, history);
+    menu(currency_info, history_index, history);
 
 
 }

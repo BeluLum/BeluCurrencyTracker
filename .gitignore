@@ -1,1 +1,45 @@
-".vs/" 
+# Visual Studio
+.vs/
+x64/
+Debug/
+Release/
+*.user
+*.suo
+*.sdf
+*.VC.db
+*.opendb
+
+# Собранные бинарники
+*.exe
+*.dll
+*.lib
+*.obj
+*.pdb
+*.ilk
+*.exp
+
+# vcpkg (управление пакетами)
+vcpkg_installed/
+vcpkg.exe
+.vcpkg-root/
+
+# Временные файлы
+*.tmp
+*.bak
+*.~*
+*~
+*.log
+
+# Файлы пользователя и IDE
+*.vcxproj.user
+*.filters.user
+
+# Git
+*.orig
+
+# Другое
+*.o
+*.so
+*.dylib
+.DS_Store
+Thumbs.db
